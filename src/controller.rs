@@ -85,10 +85,12 @@ impl Controller {
     /// check consistency as soon as the system is opened or closed.
     /// error code: -2 stands for DBCC error
     pub fn check_consistency(&mut self) {
+        View::init_check();
         if self.connection.check_consistency() == false {
             eprintln!("Fatal Error: Database Consistency Check(DBCC) failed");
             exit(-2);
         }
+        View::success_hint();
     }
 
     pub fn login_view(&mut self) {

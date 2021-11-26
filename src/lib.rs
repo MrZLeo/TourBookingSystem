@@ -14,16 +14,15 @@ extern crate lazy_static;
 use crate::controller::Controller;
 use crate::mysql_connection::MySQLConnection;
 use crate::view::*;
-use std::{io, time};
+use prettytable::Row;
 use std::io::{stdin, stdout, Stdin, Write};
 use std::thread::sleep;
-use prettytable::Row;
+use std::{io, time};
 
 pub fn run() {
     let url = "mysql://root:12345678@localhost:3306/BookingSystem";
     let mut controller = Controller::new(MySQLConnection::new(url));
 
-    println!("正在进行数据库一致性检查...");
     let time = time::Duration::from_secs(1);
     sleep(time);
     controller.check_consistency();

@@ -141,4 +141,8 @@ impl View {
             false
         };
     }
+
+    pub fn init_check() {
+        println!("正在进行数据库一致性检查...");
+    }
 }
