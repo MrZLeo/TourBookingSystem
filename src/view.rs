@@ -31,7 +31,7 @@ impl View {
             ["0. 退出当前用户"],
             ["9. 退出程序"]
         );
-        table.set_titles(row!["TouringBookingSystem"]);
+        table.set_titles(row![bc->"TouringBookingSystem"]);
         table.set_format(*format::consts::FORMAT_NO_LINESEP_WITH_TITLE);
         table.printstd();
         print!("$> 选择服务：");
@@ -46,7 +46,7 @@ impl View {
             ["3. 预定宾馆房间"],
             ["4. 返回上一级"]
         );
-        table.set_titles(row!["预定服务"]);
+        table.set_titles(row![bc->"预定服务"]);
         table.set_format(*format::consts::FORMAT_NO_LINESEP_WITH_TITLE);
         table.printstd();
         print!("$> 选择类型：");
@@ -61,7 +61,7 @@ impl View {
             ["3. 取消预定宾馆房间"],
             ["4. 返回上一级"]
         );
-        table.set_titles(row!["取消预订"]);
+        table.set_titles(row![bc->"取消预订"]);
         table.set_format(*format::consts::FORMAT_NO_LINESEP_WITH_TITLE);
         table.printstd();
         print!("$> 选择类型：");
@@ -76,7 +76,7 @@ impl View {
             ["3. 查询宾馆房间"],
             ["4. 返回上一级"]
         );
-        table.set_titles(row!["查询服务"]);
+        table.set_titles(row![bc->"查询服务"]);
         table.set_format(*format::consts::FORMAT_NO_LINESEP_WITH_TITLE);
         table.printstd();
         print!("$> 选择类型：");

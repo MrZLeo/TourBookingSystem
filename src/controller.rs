@@ -16,9 +16,9 @@ use std::thread::sleep;
 use std::time;
 
 lazy_static! {
-    static ref FLIGHT_HINT: Row = row!["航班号", "价格", "出发城市", "到达城市"];
-    static ref HOTEL_HINT: Row = row!["大巴号", "地点", "价格"];
-    static ref BUS_HINT: Row = row!["酒店号", "地点", "价格"];
+    static ref FLIGHT_HINT: Row = row![b->"航班号", b->"价格", b->"出发城市", b->"到达城市"];
+    static ref HOTEL_HINT: Row = row![b->"大巴号", b->"地点", b->"价格"];
+    static ref BUS_HINT: Row = row![b->"酒店号", b->"地点", b->"价格"];
 }
 
 pub struct Controller {
