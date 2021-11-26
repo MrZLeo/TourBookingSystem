@@ -28,7 +28,8 @@ impl View {
             ["3. 查询航班/大巴车/宾馆房间/客户和预订信息"],
             ["4. 查询旅行线路"],
             ["5. 检查预定线路的完整性"],
-            ["0. 退出当前用户"]
+            ["0. 退出当前用户"],
+            ["9. 退出程序"]
         );
         table.set_titles(row!["TouringBookingSystem"]);
         table.set_format(*format::consts::FORMAT_NO_LINESEP_WITH_TITLE);
