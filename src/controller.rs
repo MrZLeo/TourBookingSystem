@@ -12,6 +12,8 @@ use std::collections::{HashMap, HashSet};
 use std::io::{stdin, stdout, Read, Stdin, Write};
 use std::iter::FromIterator;
 use std::process::exit;
+use std::thread::sleep;
+use std::time;
 
 lazy_static! {
     static ref FLIGHT_HINT: Row = row!["航班号", "价格", "出发城市", "到达城市"];
@@ -86,6 +88,8 @@ impl Controller {
     /// error code: -2 stands for DBCC error
     pub fn check_consistency(&mut self) {
         View::init_check();
+        let time = time::Duration::from_secs(1);
+        sleep(time);
         if self.connection.check_consistency() == false {
             eprintln!("Fatal Error: Database Consistency Check(DBCC) failed");
             exit(-2);

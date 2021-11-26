@@ -23,8 +23,6 @@ pub fn run() {
     let url = "mysql://root:12345678@localhost:3306/BookingSystem";
     let mut controller = Controller::new(MySQLConnection::new(url));
 
-    let time = time::Duration::from_secs(1);
-    sleep(time);
     controller.check_consistency();
     while controller.run() == Status::Login {}
     println!("------ 程序结束 ------");
